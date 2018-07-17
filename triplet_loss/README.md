@@ -19,13 +19,16 @@ Select hardest positive and hardest negative of each anchors.
 * Select triplet examples randomly
 
 Same setup, training twice.
+
 ![randomly](https://github.com/SmallHedgehog/Loss-PyTorch/blob/master/triplet_loss/pics/randomly.png)
 
 * Online triplet mining of batch hard[1][2]
 
 Same setup, training twice.
+
 ![batch hard](https://github.com/SmallHedgehog/Loss-PyTorch/blob/master/triplet_loss/pics/batch%20hard.png)
 
 ### Reference
 [1] mountain blue. https://zhuanlan.zhihu.com/p/35560666
-[2] Alexander Hermans, Lucas Beyer and Bastian Leibe, Visual Computing Institute RWTH Aachen University. In Defense of the Triplet Loss for Person Re-Identification.
+
+[2] Alexander Hermans, Lucas Beyer and Bastian Leibe, Visual Computing Institute RWTH Aachen University. In Defense of the Triplet Loss for Person Re-Identification
