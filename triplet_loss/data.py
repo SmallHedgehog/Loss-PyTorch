@@ -31,8 +31,8 @@ transform = transforms.Compose([
 #    ])
 #}
 
-train_sets = torchvision.datasets.MNIST('./data', True, transform, download=False)
-tests_sets = torchvision.datasets.MNIST('./data', False, transform, download=False)
+train_sets = torchvision.datasets.MNIST('./data', True, transform, download=True)
+tests_sets = torchvision.datasets.MNIST('./data', False, transform, download=True)
 
 # train_sets = torchvision.datasets.CIFAR10('./data/CIFAR10', True, transform['train'], download=False)
 # tests_sets = torchvision.datasets.CIFAR10('./data/CIFAR10', False, transform['test'], download=False)
@@ -204,12 +204,12 @@ class TRIPLET_MNIST(data.Dataset):
         return fmt_str
 
 
-triplet_train_sets = TRIPLET_MNIST('./data/', True, ntriplets=50000, transform=transform, download=False)
+triplet_train_sets = TRIPLET_MNIST('./data/', True, ntriplets=50000, transform=transform, download=True)
 triplet_train_loader = torch.utils.data.DataLoader(triplet_train_sets,
                                                    batch_size=32,
                                                    shuffle=True,
                                                    num_workers=2)
-triplet_tests_sets = TRIPLET_MNIST('./data/', False, ntriplets=10000, transform=transform, download=False)
+triplet_tests_sets = TRIPLET_MNIST('./data/', False, ntriplets=10000, transform=transform, download=True)
 triplet_tests_loader = torch.utils.data.DataLoader(triplet_tests_sets,
                                                    batch_size=32,
                                                    shuffle=True,
